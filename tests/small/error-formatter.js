@@ -3,7 +3,7 @@
  */
 var assert = require('chai').assert;
 var sinon = require('sinon');
-var ErrorFormatter = require('../../lib/report-formatter').ErrorFormatter;
+var ErrorFormatter = require('../../lib/error-formatter').ErrorFormatter;
 
 // for mocking
 var FUNC = function() {};
