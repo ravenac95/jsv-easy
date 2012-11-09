@@ -1,17 +1,17 @@
 /**
- * Tests for the ReportFormatter
+ * Tests for the ErrorFormatter
  */
 var assert = require('chai').assert;
 var sinon = require('sinon');
-var ReportFormatter = require('../../lib/report-formatter').ReportFormatter;
+var ErrorFormatter = require('../../lib/report-formatter').ErrorFormatter;
 
 // for mocking
 var FUNC = function() {};
 
-describe('ReportFormatter', function() {
+describe('ErrorFormatter', function() {
   describe('#constructor', function() {
     it('should construct', function() {
-      var formatter = new ReportFormatter({});
+      var formatter = new ErrorFormatter({});
     });
   });
 
@@ -20,7 +20,7 @@ describe('ReportFormatter', function() {
     var mockHandlers;
     beforeEach(function() {
       mockHandlers = sinon.mock({ a: FUNC, b: FUNC, c: FUNC });
-      formatter = new ReportFormatter(mockHandlers.object);
+      formatter = new ErrorFormatter(mockHandlers.object);
     });
     it('should call a handler', function() {
       var error1 = { message: 'a', uri: 'urn:test#/a' };
