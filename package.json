@@ -1,0 +1,21 @@
+{
+  "name": "jsv-easy",
+  "version": "0.1.0",
+  "author": "Reuven V. Gonzales",
+  "description": "JSV made easy",
+  "keywords": [
+    "json",
+    "schema"
+  ],
+  "license": "MIT",
+  "main": "./lib/jsv-easy.js",
+  "dependencies": {
+    "JSV": "4.0.x"
+  },
+  "devDependencies": { 
+    "mocha": "*",
+    "chai": "*",
+    "sinon": "*"
+  }
+}
+
