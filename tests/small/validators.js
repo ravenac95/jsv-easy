@@ -118,7 +118,7 @@ describe('validUUID', function() {
     ],
     invalid: [
       'rrrrrrrr-1111-1212-1222-000000000000',
-      '550e8400e29b41d4a716446655440000',
+      '550e8400e29b41d4a716446655440000'
     ]
   });
 });
@@ -127,7 +127,7 @@ describe('validUUID4', function() {
   var validUUID4 = validators.validUUID4;
 
   commonValidatorTests({
-    type: 'uuid',
+    type: 'uuid4',
     validator: validUUID4,
     valid: [
       '550e8400-e29b-41d4-a716-446655440000',
@@ -135,7 +135,7 @@ describe('validUUID4', function() {
     invalid: [
       '550e8400-e29b-41d4-1716-446655440000',
       '550e8400-e29b-31d4-a716-446655440000',
-      '550e8400e29b41d4a716446655440000',
+      '550e8400e29b41d4a716446655440000'
     ]
   });
 });
