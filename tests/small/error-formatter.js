@@ -39,7 +39,7 @@ describe('ErrorFormatter', function() {
       mockHandlers.verify();
     });
 
-    it('should call multiple handler', function() {
+    it('should call multiple handlers', function() {
       var error1 = { message: 'a', uri: 'urn:test#/a' };
       var error2 = { message: 'b', uri: 'urn:test#/b' };
       var error3 = { message: 'c', uri: 'urn:test#/c' };
