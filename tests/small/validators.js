@@ -101,7 +101,7 @@ describe('validTime', function() {
     invalid: [
       '99:00:00',
       '24:00:00',
-      '05:00 PM',
+      '05:00 PM'
     ]
   });
 });
