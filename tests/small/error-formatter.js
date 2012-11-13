@@ -32,10 +32,7 @@ describe('ErrorFormatter', function() {
       var retVal = 'new message';
       mockHandlers.expects('a').withArgs(error1).returns(retVal);
       var formatted = formatter.format(report);
-      assert.deepEqual(formatted, { 
-        valid: false, 
-        errors: [{ message: retVal, property: '#/a' }]
-      });
+      assert.deepEqual(formatted, [{ message: retVal, property: '#/a' }]);
       mockHandlers.verify();
     });
 
@@ -59,8 +56,8 @@ describe('ErrorFormatter', function() {
         .expects('b').withArgs(error2)
       mockHandlers
         .expects('c').withArgs(error3);
-      var formatted = formatter.format(report);
-      assert.lengthOf(formatted.errors, 3);
+      var formattedErrors = formatter.format(report);
+      assert.lengthOf(formattedErrors, 3);
       mockHandlers.verify();
     });
   });
