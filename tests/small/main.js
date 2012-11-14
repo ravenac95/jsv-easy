@@ -4,7 +4,7 @@ var JSV = require('jsv').JSV;
 var jsveasy = require('../../lib/jsv-easy');
 var easyErrorFormatter = require('../../lib/error-formatter').easyErrorFormatter;
 
-describe('Main API', function() {
+describe('Main API (with mocks)', function() {
   describe('#validate', function() {
     var stubCreateEnv;
     var stubErrorFormat;
