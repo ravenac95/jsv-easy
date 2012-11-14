@@ -10,12 +10,15 @@
   "license": "MIT",
   "main": "./lib/jsv-easy.js",
   "dependencies": {
-    "JSV": "4.0.x"
+    "JSV": "4.0.x",
+    "moment": "*",
+    "validator": "*"
   },
   "devDependencies": { 
     "mocha": "*",
     "chai": "*",
-    "sinon": "*"
+    "sinon": "*",
+    "lodash": "*"
   }
 }
 
