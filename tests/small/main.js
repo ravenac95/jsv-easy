@@ -1,6 +1,6 @@
 var assert = require('chai').assert;
 var sinon = require('sinon');
-var JSV = require('jsv').JSV;
+var JSV = require('JSV').JSV;
 var jsveasy = require('../../lib/jsv-easy');
 var easyErrorFormatter = require('../../lib/error-formatter').easyErrorFormatter;
 
