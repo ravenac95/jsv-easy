@@ -9,7 +9,7 @@ var _ = require('lodash');
 describe('jsv-easy Custom JSV Environment', function() {
   describe('Creating a jsv easy environment', function() {
     it('should create a new jsv-easy environment', function() {
-      var env = JSV.createEnvironment('jsv-easy-draft-03')
+      var env = JSV.createEnvironment('jsv-easy-draft-03');
       assert.isUndefined(env.findSchema('jsv-easy-draft-03'));
     });
   });
@@ -41,8 +41,8 @@ describe('jsv-easy Custom JSV Environment', function() {
     var normalPropertiesTests = {
       array: [
         [],
-        [0]
-        [1,2,3],
+        [0],
+        [1,2,3]
       ],
       string: [
         '',
@@ -86,7 +86,7 @@ describe('jsv-easy Custom JSV Environment', function() {
               type: name
             }
           }
-        }
+        };
         tests.forEach(function(test) {
           var testObj = {
             test: test
@@ -102,7 +102,7 @@ describe('jsv-easy Custom JSV Environment', function() {
         good: [
           '2012-12-01',
           '2012-01-31',
-          '2300-11-30',
+          '2300-11-30'
         ],
         bad: [
           '2500-60-60',
@@ -140,7 +140,7 @@ describe('jsv-easy Custom JSV Environment', function() {
       },
       uuid: {
         good: [
-          '00000000-0000-0000-0000-000000000000'
+          '00000000-0000-1000-8000-000000000000'
         ],
         bad: [
           'hello',
@@ -149,7 +149,7 @@ describe('jsv-easy Custom JSV Environment', function() {
       },
       uuid4: {
         good: [
-          '550e8400-e29b-41d4-a716-446655440000',
+          '550e8400-e29b-41d4-a716-446655440000'
         ],
         bad: [
           '550e8400-e29b-41d4-1716-446655440000',
@@ -168,7 +168,7 @@ describe('jsv-easy Custom JSV Environment', function() {
             format: format
           }
         }
-      }
+      };
       it('should validate ' + format + ' format', function() {
         tests.good.forEach(function(test) {
           var testObj = {
