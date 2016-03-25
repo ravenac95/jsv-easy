@@ -56,13 +56,13 @@ describe('validDateTime', function() {
     type: 'date-time',
     validator: validDateTime,
     valid: [
+      '2012-01-01T00:00:00',
       '2012-01-01T00:00:00Z',
       '2012-01-01T00:00:00+00:00',
       '2012-01-01T00:00:00.123+00:00',
       '2400-01-12T00:00:00.123Z'
     ],
     invalid: [
-      '2012-01-01T00:00:00',
       '2012-01-01T00:00:00+1',
       '2012-14-01T00:00:00+1',
       '5PM, January 1, 2014'
@@ -96,11 +96,11 @@ describe('validTime', function() {
     validator: validTime,
     valid: [
       '00:00:00',
-      '23:59:59'
+      '23:59:59',
+      '24:00:00'
     ],
     invalid: [
       '99:00:00',
-      '24:00:00',
       '05:00 PM'
     ]
   });

@@ -175,6 +175,9 @@ describe('jsv-easy Custom JSV Environment', function() {
             test: test
           };
           var report = env.validate(testObj, testSchema);
+          if (format === 'email') {
+            debugger;
+          }
           assert.lengthOf(report.errors, 0);
         });
       });
